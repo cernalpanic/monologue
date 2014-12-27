@@ -1,4 +1,6 @@
 class Monologue::User < ActiveRecord::Base
+  self.table_name = 'users' # use the devise table instead of monologues
+
   has_many :posts
 
   has_secure_password
